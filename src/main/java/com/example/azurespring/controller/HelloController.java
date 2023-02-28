@@ -1,15 +1,15 @@
 package com.example.azurespring.controller;
 
+
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-@RestController
+
 public class HelloController {
-	
-	@RequestMapping("/")
-	public String index() {
-		return "Greetings from Azure";
-	}
+	 @RequestMapping(value="/home", method=RequestMethod.GET)
+	 public String index() {
+		return "Hello World with Spring Boot";
+	 }
 
 }
-
